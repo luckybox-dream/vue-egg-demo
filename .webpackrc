@@ -1,0 +1,6 @@
+{
+  "outputPath": "app/public",
+  "manifest": {
+    "fileName": "../../config/manifest.json"
+  }
+}

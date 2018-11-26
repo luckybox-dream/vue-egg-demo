@@ -1,0 +1,93 @@
+{
+  "name": "vue-egg-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --workers=1 --port=8003 --ignore-stderr",
+    "stop": "egg-scripts stop",
+    "local": "egg-bin dev -r egg-ts-helper/register --port=8003",
+    "debug": "egg-bin debug -r egg-ts-helper/register",
+    "test-local": "egg-bin test -r egg-ts-helper/register",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "cov": "egg-bin cov -r egg-ts-helper/register",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "ci": "npm run lint && npm run cov && npm run tsc",
+    "autod": "autod",
+    "lint": "tslint --project . -c tslint.json",
+    "clean": "ets clean",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "co-request": "^1.0.0",
+    "egg": "^2.6.1",
+    "egg-rewriter": "^1.0.4",
+    "egg-scripts": "^2.6.0",
+    "koa-is-json": "^1.0.0",
+    "url": "^0.11.0",
+    "vue": "^2.5.17",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "@types/supertest": "^2.0.0",
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-eslint": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "babel-eslint": "^10.0.1",
+    "egg-bin": "^4.6.2",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.16.0",
+    "egg-ts-helper": "^1.11.0",
+    "egg-view-assets": "^1.3.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "tslib": "^1.9.0",
+    "tslint": "^4.0.0",
+    "typescript": "^3.0.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "eslintIgnore": [
+    "coverage"
+  ],
+  "author": "",
+  "license": "MIT"
+}
