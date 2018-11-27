@@ -1,15 +1,13 @@
-# hackernews-async-ts
-
-[Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
 
 ## QuickStart
 
 ### Development
 
 ```bash
-$ npm i
-$ npm run dev
-$ open http://localhost:7001/
+$ yarn
+$ yarn run local
+$ 前端项目访问    http://localhost:8080/
+$ 后端接口启动端口 http://localhost:8003/
 ```
 
 Don't tsc compile at development mode, if you had run `tsc` then you need to `npm run clean` before `npm run dev`.
@@ -17,8 +15,8 @@ Don't tsc compile at development mode, if you had run `tsc` then you need to `np
 ### Deploy
 
 ```bash
-$ npm run tsc
-$ npm start
+$ yarn run tsc
+$ yarn run start
 ```
 
 ### Npm Scripts
@@ -29,5 +27,5 @@ $ npm start
 
 ### Requirement
 
-- Node.js 8.x
+- Node.js 8.11.1
 - Typescript 2.8+
